@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<h1>Library</h1>
+
+<ul>
+    {% for song in songs %}
+    <li>{{song.artist}} - {{song.title}}</li>
+    {% endfor %}
+</ul>
+
+{% endblock %}

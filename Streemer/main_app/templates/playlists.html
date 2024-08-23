@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<h1>Playlists</h1>
+
+<ul>
+    {% for playlist in playlists %}
+    <li>{{playlist.title}}</li>
+    {% endfor %}
+</ul>
+
+{% endblock %}

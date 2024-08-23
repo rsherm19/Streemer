@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% block head %}
+    {% endblock %}
+</head>
+<body>
+    <nav>
+        <a href="{% url 'home' %}" class="nav-link">Home</a>
+        <a href="{% url 'playlists' %}" class="nav-link">Playlists</a>
+        <a href="{% url 'library' %}" class="nav-link">Library</a>
+    </nav>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+</body>
+</html>
