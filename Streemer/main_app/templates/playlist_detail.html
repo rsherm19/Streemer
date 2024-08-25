@@ -5,11 +5,11 @@
 
 <h1>{{ playlist.title }}</h1>
 
-<div>
+<ul>
     {% for song in songs %}
-    <a href="/library/{{song.id}}">{{song.artist}} - {{song.title}}</a>
+    <li><a href="/library/{{song.id}}">{{song.artist}} - {{song.title}}</a></li>
     {% endfor %}
-</div>
+</ul>
 
 
-{% endblock %}
+    {% endblock %}
