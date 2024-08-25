@@ -3,12 +3,13 @@
 
 {% block content %}
 
-<h1>Library</h1>
+<h1>{{ playlist.title }}</h1>
 
-<ul>
+<div>
     {% for song in songs %}
-    <li><a href="{{song.id}}">{{song.artist}} - {{song.title}}</a></li>
+    <a href="/library/{{song.id}}">{{song.artist}} - {{song.title}}</a>
     {% endfor %}
-</ul>
+</div>
+
 
 {% endblock %}
