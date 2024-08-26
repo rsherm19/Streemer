@@ -12,7 +12,7 @@
 
 <body>
     <nav>
-        {% if user.is_authenticated %}
+    {% if user.is_authenticated %}
         <div class="nav-main">
             <a href="{% url 'home' %}" class="nav-link">Home</a>
             <a href="{% url 'playlists' %}" class="nav-link">Playlists</a>
@@ -22,13 +22,13 @@
                 <button type="submit">Log out</button>
             </form>
         </div>
-        {% else %}
+    {% else %}
         <div class="nav-auth">
             <a href="{% url 'home' %}" class="nav-link">Home</a>
-            <a href="{% url 'signin' %}" class="nav-link">Sign In</a>
+            <a href="{% url 'sign-in' %}" class="nav-link">Sign In</a>
             </form>
         </div>
-        {% endif %}
+    {% endif %}
     </nav>
     <main>
         {% block content %}
