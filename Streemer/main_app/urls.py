@@ -12,7 +12,7 @@ urlpatterns = [
     path('library/add/', views.CreateSong.as_view(), name='create-song'),
     path('library/<int:pk>/delete/', views.DeleteSong.as_view(), name='delete-song'),
     path('playlists/', views.playlists, name='playlists'),
-    path('playlists/<int:playlist_id>', views.playlist_detail),
+    path('playlists/<int:playlist_id>', views.playlist_detail, name='playlist-detail'),
     path('playlists/create', views.CreatePlaylist.as_view(), name='create-playlist'),
     path('playlists/<int:pk>/update', views.UpdatePlaylist.as_view(), name='update-playlist'),
     path('playlists/<int:playlist_id>/remove-song/<int:song_id>', views.remove_song, name='remove-song'),

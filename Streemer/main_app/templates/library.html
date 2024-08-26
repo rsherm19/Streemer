@@ -11,4 +11,10 @@
     {% endfor %}
 </ul>
 
+<!-- <a href="{% url 'create-song' %}" class="nav-link">Add a song</a> -->
+
+<form action="{% url 'create-song' %}">
+    <button>Add a song</button>
+</form>
+
 {% endblock %}

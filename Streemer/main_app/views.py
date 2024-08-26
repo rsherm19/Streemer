@@ -97,7 +97,7 @@ class UpdatePlaylist(LoginRequiredMixin, UpdateView):
 def remove_song(request, playlist_id, song_id):
     playlist = Playlist.objects.get(id=playlist_id)
     playlist.songs.remove(song_id)
-    return redirect('playlists', playlist_id=playlist_id)\
+    return redirect('playlist-detail', playlist_id=playlist.id)
     
 
 class DeletePlaylist(LoginRequiredMixin, DeleteView):
