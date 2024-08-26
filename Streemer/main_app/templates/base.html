@@ -15,6 +15,8 @@
     {% if user.is_authenticated %}
         <div class="nav-main">
             <a href="{% url 'home' %}" class="nav-link">Home</a>
+            <a href="{% url 'create-song' %}" class="nav-link">Add Song</a>
+            <a href="{% url 'create-playlist' %}" class="nav-link">Create Playlist</a>
             <a href="{% url 'playlists' %}" class="nav-link">Playlists</a>
             <a href="{% url 'library' %}" class="nav-link">Library</a>
             <form id="logout-form" method="post" action="{% url 'logout' %}">
@@ -26,6 +28,7 @@
         <div class="nav-auth">
             <a href="{% url 'home' %}" class="nav-link">Home</a>
             <a href="{% url 'sign-in' %}" class="nav-link">Sign In</a>
+            <a href="{% url 'sign-up' %}" class="nav-link">Sign Up</a>
             </form>
         </div>
     {% endif %}

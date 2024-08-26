@@ -5,7 +5,7 @@ from django.urls import reverse
 class Song(models.Model):
     title = models.CharField(max_length=100)
     artist = models.CharField(max_length=100)
-    is_liked = models.BooleanField()
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.title
@@ -24,4 +24,4 @@ class Playlist(models.Model):
         return self.title
     
     def get_absolute_url(self):
-        return reverse('library')
+        return reverse('playlists')

@@ -7,9 +7,20 @@
 
 <ul>
     {% for song in songs %}
-    <li><a href="/library/{{song.id}}">{{song.artist}} - {{song.title}}</a></li>
+    <li>
+        <a href="/library/{{song.id}}">{{song.artist}} - {{song.title}}</a>
+        <span><form action="/playlists/{{playlist.id}}/remove-song/{{song.id}}"><button>Remove Song</button></form></span>
+    </li>
     {% endfor %}
 </ul>
+
+<form action="/playlists/{{playlist.id}}/update">
+    <button>Add a song</button>
+</form>
+
+<form action="/playlists/{{playlist.id}}/delete">
+    <button>Delete Playlist</button>
+</form>
 
 
     {% endblock %}

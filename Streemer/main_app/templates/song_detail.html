@@ -6,6 +6,9 @@
 <div>
     <h2>{{song.artist}} - {{song.title}}</h2>
     <img src="#" alt="album cover">
+    <form action="{% url 'delete-song' song.id %}">
+        <button>Delete</button>
+    </form>
 </div>
 
 
