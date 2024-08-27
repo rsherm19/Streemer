@@ -5,16 +5,14 @@
 
 <h1>Library</h1>
 
+<form action="{% url 'create-song' %}" class="white-button-container">
+    <button class="white-button">Add a song</button>
+</form>
+
 <ul>
     {% for song in songs %}
     <li><a href="{{song.id}}">{{song.artist}} - {{song.title}}</a></li>
     {% endfor %}
 </ul>
-
-<!-- <a href="{% url 'create-song' %}" class="nav-link">Add a song</a> -->
-
-<form action="{% url 'create-song' %}">
-    <button>Add a song</button>
-</form>
 
 {% endblock %}

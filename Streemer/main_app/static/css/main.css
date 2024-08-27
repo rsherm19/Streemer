@@ -61,7 +61,16 @@ button:hover {
     cursor: pointer;
 }
 
+a {
+    text-decoration: none;
+    color: rgb(241, 241, 241);
+}
+
 fieldset {
+    display: none;
+}
+
+.errorlist {
     display: none;
 }
 
@@ -97,12 +106,53 @@ fieldset {
     display: none;
 }
 
+.playlist-container {
+    margin: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.playlist {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 1rem;
+    padding-bottom: 2rem;
+}
+
+.playlist-cover {
+    width: 23vw;
+    transition: 0.3s;
+}
+
+.playlist:hover>img {
+    transform: scale(1.05);
+}
+
+.white-button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.white-button {
+    background: none;
+    border: 2px solid rgb(241, 241, 241);
+}
+
 #home-header {
     margin: 30vh 0;
     font-family: Great Vibes, brushscript;
     font-size: 7rem;
     font-style: italic;
     transform: rotate(-4deg);
+}
+
+#sign-in,
+#sign-up {
+    color: rgb(71, 71, 71);
+    font-weight: bold;
 }
 
 #logout-form {
@@ -113,6 +163,13 @@ fieldset {
 #logout-form>button {
     background-color: transparent;
     font-size: 1.3rem;
+    color: rgba(64, 64, 64, 0.774);
+    font-weight: bold;
     padding: 0;
     margin-top: 3px;
+}
+
+#login-error-message {
+    position: relative;
+    bottom: 1rem;
 }

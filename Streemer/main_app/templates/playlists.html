@@ -5,14 +5,19 @@
 
 <h1>Playlists</h1>
 
-<div>
+<form action="{% url 'create-playlist' %}" class="white-button-container">
+    <button class="white-button">New Playlist</button>
+</form>
+
+<div class="playlist-container">
     {% for playlist in playlists %}
-    <a href="/playlists/{{playlist.id}}">{{playlist.title}}</a>
+    <a href="/playlists/{{playlist.id}}">
+        <div class="playlist">
+            <h3>{{playlist.title}}</h3>
+            <img src="../static/images/album_cover.jpg" alt="orange album cover with musical eighth note" class="playlist-cover">
+        </div>
+    </a>
     {% endfor %}
 </div>
-
-<form action="{% url 'create-playlist' %}">
-    <button>Create a playlist</button>
-</form>
 
 {% endblock %}
