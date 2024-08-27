@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Honk:MORF,SHLN@36,0&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Pragati+Narrow:wght@400;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+body {
+    box-sizing: border-box;
+    background: rgb(58, 89, 180);
+    background: linear-gradient(90deg, rgba(58, 89, 180, 1) 0%, rgba(19, 147, 133, 1) 52%, rgba(0, 255, 51, 1) 100%);
+    color: rgb(241, 241, 241);
+    font-family: Lato, Helvetica;
+    font-size: 0.9rem;
+    /* font-weight: 600; */
+}
+
+h1,
+h2 {
+    text-align: center;
+    margin: 1.6rem;
+}
+
+h1 {
+    font-size: 2.8rem;
+}
+
+
+form, table {
+    width: fit-content;
+    padding: 2rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    display: block;
+}
+
+input {
+    width: 15rem;
+    padding: 4px;
+    margin-top: 5px;
+}
+
+button {
+    padding: .5rem 0;
+    margin-top: 1rem;
+    border-style: none;
+    background-color: rgba(0, 0, 0, 0.185);
+}
+
+
+.nav-main,
+.nav-auth {
+    display: flex;
+    justify-content: space-around;
+    margin: 1.3rem 19vw;
+}
+
+.nav-link {
+    font-style: none;
+    text-decoration: none;
+    color: rgb(241, 241, 241);
+    font-size: 1.3rem;
+}
+
+.helptext {
+    display: none;
+}
+
+#home-header {
+    margin: 30vh 0;
+    font-family: Great Vibes, brushscript;
+    font-size: 7rem;
+    font-style: italic;
+    transform: rotate(-4deg);
+}

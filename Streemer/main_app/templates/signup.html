@@ -8,9 +8,9 @@
 <form action="" method="post" class="form-container">
     {% csrf_token %}
     <table>
-      {{ form.as_table }}
+      {{ form }}
     </table>
-    <button type="submit" class="btn submit">Submit!</button>
+    <button type="submit" class="btn submit">Submit</button>
   </form>
 
 {% endblock %}
