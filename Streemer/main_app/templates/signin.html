@@ -5,7 +5,7 @@
 
 <h1 class="form-header">Sign In</h1>
 
-<form action="{% url 'login' %}" method="post" class="login">
+<form action="{% url 'login' %}" method="post" class="login"> <!-- I used this video to help get rid of errors upon loggin in https://www.youtube.com/watch?v=8V-mscw6H64 -->
     {% csrf_token %} {{ form.as_p }}
     <input type="hidden" name="next" value="{{ next }}" />
     <button type="submit" class="btn submit">Login</button>

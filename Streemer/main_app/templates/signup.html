@@ -8,20 +8,6 @@
 <form action="" method="post" class="form-container">
   {% csrf_token %}
   {{ form }}
-  <!-- {% for field in form %}
-  <div>
-    {{ field.label_tag }}
-    {{field}}
-  </div>
-  {% if field.help_text %}
-  <div>{{field.help_text}}</div>
-  {% endif %}
-
-  {% for error in field.errors %}
-  <div style="color: red;">{{error}}</div>
-  {% endfor %}
-
-  {% endfor %} -->
   {% if error_message %}
   <p>{{error_message}}</p>
   {% endif %}
