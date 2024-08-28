@@ -74,6 +74,11 @@ class CreateSong(LoginRequiredMixin, CreateView):
         return super().form_valid(form)
 
 
+class UpdateSong(LoginRequiredMixin, UpdateView):
+    model = Song
+    fields = ['title', 'artist']
+
+
 class DeleteSong(LoginRequiredMixin, DeleteView):
     model = Song
     success_url = '/library/'

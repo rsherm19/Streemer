@@ -3,7 +3,11 @@
 
 {% block content %}
 
-<h1 class="form-header">Add Song</h1>
+{% if song %}
+<h1 class="form-header">Edit Song</h1>
+{% else %}
+<h1 class="form-header">Create Song</h1>
+{% endif %}
 
 <form action="" method="post" class="form-container">
     {% csrf_token %}

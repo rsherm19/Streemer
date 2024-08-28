@@ -10,6 +10,7 @@ urlpatterns = [
     path('library/', views.library, name='library'),
     path('library/<int:song_id>', views.song_detail),
     path('library/add/', views.CreateSong.as_view(), name='create-song'),
+    path('library/<int:pk>/update/', views.UpdateSong.as_view(), name='update-song'),
     path('library/<int:pk>/delete/', views.DeleteSong.as_view(), name='delete-song'),
     path('playlists/', views.playlists, name='playlists'),
     path('playlists/<int:playlist_id>', views.playlist_detail, name='playlist-detail'),

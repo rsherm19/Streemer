@@ -2,12 +2,14 @@
 {% load static %}
 
 {% block content %}
-
-<div>
-    <h2>{{song.artist}} - {{song.title}}</h2>
+<h2 class="form-header">{{song.artist}} - {{song.title}}</h2>
+<div class="song-list">
     <img src="../static/images/album_cover.jpg" alt="orange album cover with musical eighth note" class="playlist-cover">
+    <form action="{% url 'update-song' song.id %}">
+        <button>Edit Song</button>
+    </form>
     <form action="{% url 'delete-song' song.id %}">
-        <button>Delete</button>
+        <button>Delete Song</button>
     </form>
 </div>
 
