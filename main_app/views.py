@@ -91,11 +91,12 @@ class CreatePlaylist(LoginRequiredMixin, CreateView):
     def form_valid(self, form):
         form.instance.user = self.request.user
         return super().form_valid(form)
-    
+
 
 class UpdatePlaylist(LoginRequiredMixin, UpdateView):
     model = Playlist
     fields = ['songs']
+
 
 class UpdatePlaylistTitle(LoginRequiredMixin, UpdateView):
     model = Playlist
@@ -107,7 +108,7 @@ def remove_song(request, playlist_id, song_id):
     playlist = Playlist.objects.get(id=playlist_id)
     playlist.songs.remove(song_id)
     return redirect('playlist-detail', playlist_id=playlist.id)
-    
+
 
 class DeletePlaylist(LoginRequiredMixin, DeleteView):
     model = Playlist
