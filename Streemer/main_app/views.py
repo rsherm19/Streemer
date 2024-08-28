@@ -92,6 +92,10 @@ class UpdatePlaylist(LoginRequiredMixin, UpdateView):
     model = Playlist
     fields = ['songs']
 
+class UpdatePlaylistTitle(LoginRequiredMixin, UpdateView):
+    model = Playlist
+    fields = ['title']
+
 
 @login_required
 def remove_song(request, playlist_id, song_id):

@@ -24,4 +24,4 @@ class Playlist(models.Model):
         return self.title
     
     def get_absolute_url(self):
-        return reverse('playlists')
+        return reverse('playlist-detail', kwargs={'playlist_id': self.id})

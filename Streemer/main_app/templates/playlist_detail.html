@@ -5,22 +5,29 @@
 
 <h1>{{ playlist.title }}</h1>
 
-<ul>
+<ul class="song-list">
+    <img src="../static/images/album_cover.jpg" alt="orange album cover with musical eighth note" class="playlist-cover">
     {% for song in songs %}
-    <li>
-        <a href="/library/{{song.id}}">{{song.artist}} - {{song.title}}</a>
-        <span><form action="/playlists/{{playlist.id}}/remove-song/{{song.id}}"><button>Remove Song</button></form></span>
+    <li class="playlist-song">
+        <a href="{{song.id}}">
+            <div id="song-title">{{song.title}}</div>
+            <div id="song-artist">{{song.artist}}</div>
+        </a>
+        <span>
+            <form action="/playlists/{{playlist.id}}/remove-song/{{song.id}}"><button id="delete-x">&#215;</button></form>
+        </span>
     </li>
     {% endfor %}
+    <form action="/playlists/{{playlist.id}}/update" class="white-button-container">
+        <button class="white-button">Add a song to "{{playlist.title}}"</button>
+    </form>
+    <form action="/playlists/{{playlist.id}}/update-title" class="white-button-container">
+        <button class="white-button">Edit Playlist"</button>
+    </form>
+    <form action="/playlists/{{playlist.id}}/delete" class="white-button-container">
+        <button class="white-button">Delete Playlist</button>
+    </form>
 </ul>
 
-<form action="/playlists/{{playlist.id}}/update">
-    <button>Add a song to "{{playlist.title}}"</button>
-</form>
 
-<form action="/playlists/{{playlist.id}}/delete">
-    <button>Delete Playlist</button>
-</form>
-
-
-    {% endblock %}
+{% endblock %}

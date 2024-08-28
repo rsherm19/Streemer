@@ -3,14 +3,18 @@
 
 {% block content %}
 
-<h1>Create Playlist</h1>
+{% if playlist %}
+<h1 class="form-header">Edit Playlist</h1>
+{% else %}
+<h1 class="form-header">Create Playlist</h1>
+{% endif %}
 
 <form action="" method="post" class="form-container">
-    {% csrf_token %}
-    <table>
-      {{ form.as_table }}
-    </table>
-    <button type="submit" class="btn submit">Submit!</button>
-  </form>
+  {% csrf_token %}
+  <table>
+    {{ form.as_table }}
+  </table>
+  <button type="submit" class="btn submit">Submit!</button>
+</form>
 
 {% endblock %}

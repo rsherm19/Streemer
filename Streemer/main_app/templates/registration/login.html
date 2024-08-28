@@ -3,7 +3,7 @@
 
 {% block content %}
 
-<h1>Sign In</h1>
+<h1 class="form-header">Sign In</h1>
 
 <form action="{% url 'login' %}" method="post" class="login">
     {% csrf_token %} {{ form.as_p }}

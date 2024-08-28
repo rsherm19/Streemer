@@ -22,19 +22,8 @@ h1 {
 }
 
 
-.login,
-.form-container {
-    background-color: rgba(0, 0, 0, 0.2);
-    width: fit-content;
-    padding: 2rem;
-    margin: 0 auto;
-    border-radius: 8px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
 label {
+    font-size: 1rem;
     display: block;
 }
 
@@ -68,6 +57,22 @@ a {
 
 fieldset {
     display: none;
+}
+
+.form-header {
+    margin-top: 6rem;
+}
+
+.login,
+.form-container {
+    background-color: rgba(0, 0, 0, 0.2);
+    width: fit-content;
+    padding: 2rem;
+    margin: 0 auto;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .errorlist {
@@ -109,7 +114,7 @@ fieldset {
 .playlist-container {
     margin: 0 2rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
 }
 
@@ -118,12 +123,12 @@ fieldset {
     flex-direction: column;
     align-items: center;
     padding: 0 1rem;
-    padding-bottom: 2rem;
 }
 
 .playlist-cover {
     width: 23vw;
     transition: 0.3s;
+    padding-bottom: 1.4rem;
 }
 
 .playlist:hover>img {
@@ -139,6 +144,37 @@ fieldset {
 .white-button {
     background: none;
     border: 2px solid rgb(241, 241, 241);
+    /* margin-bottom: 0.3rem; */
+}
+
+.song-list {
+    list-style: none;
+    padding-left: 0;
+    margin-left: 0;
+    margin-bottom: 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.song-list>li {
+    margin-bottom: 1.5rem;
+    width: 13rem;
+}
+
+.playlist-song {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cancel-button {
+    margin-top: 1rem;
+}
+
+#song-title {
+    font-weight: bold;
+    font-size: 1rem;
 }
 
 #home-header {
@@ -172,4 +208,16 @@ fieldset {
 #login-error-message {
     position: relative;
     bottom: 1rem;
+}
+
+#delete-x {
+    background-color: transparent;
+    transform: scale(3);
+    position: relative;
+    bottom: 0.4rem;
+    transition: 0.2s;
+}
+
+#delete-x:hover {
+    color: rgb(202, 45, 45);
 }

@@ -9,9 +9,14 @@
     <button class="white-button">Add a song</button>
 </form>
 
-<ul>
+<ul class="song-list">
     {% for song in songs %}
-    <li><a href="{{song.id}}">{{song.artist}} - {{song.title}}</a></li>
+    <li>
+        <a href="{{song.id}}">
+            <div id="song-title">{{song.title}}</div>
+            <div id="song-artist">{{song.artist}}</div>
+        </a>
+    </li>
     {% endfor %}
 </ul>
 

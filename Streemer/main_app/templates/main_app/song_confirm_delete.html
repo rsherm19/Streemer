@@ -2,12 +2,12 @@
 {% load static %} 
 {% block content %}
 
-<h2>Are you sure you want to delete {{ song.title }}?</h2>
+<h2 class="form-header">Are you sure you want to delete {{ song.title }}?</h2>
 
-<form action="" method="post" class="form">
+<form action="" method="post" class="form white-button-container">
   {% csrf_token %}
-  <a href="/library/{{song.id}}" class="btn secondary">Cancel</a>
-  <button type="submit" class="btn danger">Yes - Delete!</button>
+  <button type="submit" class="btn danger white-button">Yes - Delete!</button>
+  <a href="/library/{{song.id}}" class="btn secondary cancel-button">Cancel</a>
 </form>
 
 {% endblock %}
