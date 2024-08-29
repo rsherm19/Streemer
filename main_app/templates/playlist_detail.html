@@ -9,7 +9,7 @@
     <img src="../static/images/album_cover.jpg" alt="orange album cover with musical eighth note" class="playlist-cover">
     {% for song in songs %}
     <li class="playlist-song">
-        <a href="{{song.id}}">
+        <a href="/library/{{song.id}}">
             <div id="song-title">{{song.title}}</div>
             <div id="song-artist">{{song.artist}}</div>
         </a>
