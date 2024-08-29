@@ -8,7 +8,6 @@ body {
     color: rgb(241, 241, 241);
     font-family: Lato, Helvetica;
     font-size: 0.9rem;
-    /* font-weight: 600; */
 }
 
 h1,
@@ -144,7 +143,6 @@ fieldset {
 .white-button {
     background: none;
     border: 2px solid rgb(241, 241, 241);
-    /* margin-bottom: 0.3rem; */
 }
 
 .song-list {
